@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 import { Download, Mail, ArrowDown, Linkedin, Github } from "lucide-react";
 import { useMagnetic } from "../hooks/useMagnetic";
 
-const RESUME_DOWNLOAD_URL =
-  "https://drive.google.com/uc?export=download&id=1eH6WZDmrE7RipkNZj5mqTgO904w2fS4z";
+const RESUME_DRIVE_URL =
+  "https://drive.google.com/file/d/1eH6WZDmrE7RipkNZj5mqTgO904w2fS4z/view?usp=sharing";
 
 export function Hero() {
   const [scrolled, setScrolled] = useState(false);
@@ -134,8 +134,9 @@ export function Hero() {
                 }}
               >
                 <a
-                  href={RESUME_DOWNLOAD_URL}
-                  download="Roja_Resume.pdf"
+                  href={RESUME_DRIVE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group relative inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full font-semibold text-sm bg-gradient-to-r from-[#0B1E3F] to-[#1F3864] hover:from-[#132A54] hover:to-[#2B4B82] dark:from-cyan-400 dark:to-cyan-500 dark:hover:from-cyan-300 dark:hover:to-cyan-400 text-white dark:text-slate-950 shadow-lg shadow-cyan-950/20 dark:shadow-cyan-400/20 hover:scale-[1.03] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400/60"
                 >
                   <Download className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />

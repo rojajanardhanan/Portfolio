@@ -4,8 +4,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send, CheckCircle2, Download } from "lucide-react";
 
-const RESUME_DOWNLOAD_URL =
-  "https://drive.google.com/uc?export=download&id=1eH6WZDmrE7RipkNZj5mqTgO904w2fS4z";
+const RESUME_DRIVE_URL =
+  "https://drive.google.com/file/d/1eH6WZDmrE7RipkNZj5mqTgO904w2fS4z/view?usp=sharing";
 
 export function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -130,8 +130,9 @@ export function Contact() {
                 Download the official PDF with complete academic and technical details.
               </p>
               <a
-                href={RESUME_DOWNLOAD_URL}
-                download="Roja_Resume.pdf"
+                href={RESUME_DRIVE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold bg-cyan-400 hover:bg-cyan-300 text-slate-950 shadow-md transition-colors"
               >
                 <Download className="w-3.5 h-3.5" />

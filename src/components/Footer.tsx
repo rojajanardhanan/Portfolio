@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 import { Linkedin, Github, Download, ArrowUp } from "lucide-react";
 
-const RESUME_DOWNLOAD_URL =
-  "https://drive.google.com/uc?export=download&id=1eH6WZDmrE7RipkNZj5mqTgO904w2fS4z";
+const RESUME_DRIVE_URL =
+  "https://drive.google.com/file/d/1eH6WZDmrE7RipkNZj5mqTgO904w2fS4z/view?usp=sharing";
 
 export function Footer() {
   const scrollToTop = () => {
@@ -56,9 +56,10 @@ export function Footer() {
             </a>
 
             <a
-              href={RESUME_DOWNLOAD_URL}
-              download="Roja_Resume.pdf"
-              aria-label="Download Resume"
+              href={RESUME_DRIVE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Resume"
               className="p-3 rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:border-cyan-400 hover:-translate-y-1.5 transition-all duration-300 shadow-sm"
             >
               <Download className="w-4 h-4" />

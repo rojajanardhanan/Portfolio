@@ -16,8 +16,8 @@ const navLinks = [
   { name: "Contact", href: "#contact", id: "contact" },
 ];
 
-const RESUME_DOWNLOAD_URL =
-  "https://drive.google.com/uc?export=download&id=1eH6WZDmrE7RipkNZj5mqTgO904w2fS4z";
+const RESUME_DRIVE_URL =
+  "https://drive.google.com/file/d/1eH6WZDmrE7RipkNZj5mqTgO904w2fS4z/view?usp=sharing";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -111,8 +111,9 @@ export function Navbar() {
           {/* Actions: Resume CTA & Theme Toggle */}
           <div className="hidden sm:flex items-center gap-3">
             <a
-              href={RESUME_DOWNLOAD_URL}
-              download="Roja_Resume.pdf"
+              href={RESUME_DRIVE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group flex items-center gap-1.5 px-4 py-2 text-xs font-semibold rounded-full bg-gradient-to-r from-[#0B1E3F] to-[#1F3864] text-white hover:from-[#132A54] hover:to-[#2B4B82] dark:from-cyan-500 dark:to-cyan-600 dark:text-slate-950 dark:hover:from-cyan-400 dark:hover:to-cyan-500 shadow-md hover:shadow-cyan-500/20 transition-all duration-300"
             >
               <Download className="w-3.5 h-3.5 group-hover:translate-y-0.5 transition-transform" />
@@ -168,13 +169,14 @@ export function Navbar() {
 
             <div className="mt-8 flex flex-col gap-4">
               <a
-                href={RESUME_DOWNLOAD_URL}
-                download="Roja_Resume.pdf"
+                href={RESUME_DRIVE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-600 text-slate-950 font-bold shadow-lg"
               >
                 <Download className="w-4 h-4" />
-                <span>Download Resume</span>
+                <span>Resume</span>
               </a>
               <p className="text-center text-xs text-slate-400 dark:text-slate-500">
                 Roja J • Portfolio
