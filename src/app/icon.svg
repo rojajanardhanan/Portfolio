@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="rjGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D9FF" />
+      <stop offset="50%" stop-color="#1F3864" />
+      <stop offset="100%" stop-color="#C9A86A" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="100" height="100" rx="24" fill="#0B1E3F" />
+  <rect x="2" y="2" width="96" height="96" rx="22" stroke="url(#rjGrad)" stroke-width="2.5" fill="none" opacity="0.6" />
+  <!-- RJ Monogram -->
+  <text x="50" y="64" font-family="'Space Grotesk', system-ui, sans-serif" font-size="44" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1">
+    R<tspan fill="#00D9FF">J</tspan>
+  </text>
+  <circle cx="78" cy="30" r="4.5" fill="#00D9FF" filter="url(#glow)" />
+</svg>
